@@ -1,6 +1,6 @@
 # sst-tutorial
 
 
-## Para rodar o projeto
+## To run:
 
 ` npx run dev `
