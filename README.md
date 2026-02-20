@@ -61,7 +61,9 @@ npx sst deploy --stage production
 npm test
 ```
 
-Runs unit tests for both packages (`core` and `functions`) with vitest
+Runs unit tests for both packages (`core` and `functions`) with vitest. No AWS credentials needed.
+
+To test the live API with Postman, Apidog, or any HTTP client, see the [Manual Testing Guide](docs/manual-testing.md).
 
 ## Teardown
 
