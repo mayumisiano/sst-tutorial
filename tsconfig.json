@@ -1,7 +1,13 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
   "exclude": ["packages"],
   "compilerOptions": {
-    "moduleResolution": "node"
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

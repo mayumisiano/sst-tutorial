@@ -1,8 +1,6 @@
-import { ApiHandler } from "sst/node/api";
-
-export const handler = ApiHandler(async (_evt) => {
+export const handler = async () => {
   return {
     statusCode: 200,
-    body: `Hello Green Heroes!!!! 🚀🚀🚀✨✨✨♻️♻️♻️ `,
+    body: `Hello World!`,
   };
-});
+};

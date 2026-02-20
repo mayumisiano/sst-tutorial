@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "sst bind vitest",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "typecheck": "tsc -noEmit"
   },
   "devDependencies": {
     "@types/node": "^20.4.0",
     "@types/aws-lambda": "^8.10.119",
-    "vitest": "^0.33.0",
-    "sst": "^2.19.1"
+    "vitest": "^4.0.0",
+    "sst": "^3"
   }
 }

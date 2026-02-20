@@ -1,18 +1,17 @@
-import { ApiHandler } from "sst/node/api";
 import { Todo } from "@sst-demo/core/todo";
 
-export const create = ApiHandler(async (_evt) => {
+export const create = async () => {
   await Todo.create();
 
   return {
     statusCode: 200,
     body: "Todo created",
   };
-});
+};
 
-export const list = ApiHandler(async (_evt) => {
+export const list = async () => {
   return {
     statusCode: 200,
     body: JSON.stringify(Todo.list()),
   };
-});
+};

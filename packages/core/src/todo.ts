@@ -1,22 +1,11 @@
 export * as Todo from "./todo";
-import { z } from "zod";
 import crypto from "crypto";
-
-import { event } from "./event";
-
-export const Events = {
-  Created: event("todo.created", {
-    id: z.string(),
-  }),
-};
+import { publishEvent } from "./event";
 
 export async function create() {
   const id = crypto.randomUUID();
-  // write to database
 
-  await Events.Created.publish({
-    id,
-  });
+  await publishEvent("sst-demo", "todo.created", { id });
 }
 
 export function list() {

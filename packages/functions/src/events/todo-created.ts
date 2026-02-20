@@ -1,6 +1,5 @@
-import { EventHandler } from "sst/node/event-bus";
-import { Todo } from "@sst-demo/core/todo";
+import type { EventBridgeEvent } from "aws-lambda";
 
-export const handler = EventHandler(Todo.Events.Created, async (evt) => {
-  console.log("Todo created", evt);
-});
+export const handler = async (evt: EventBridgeEvent<string, { id: string }>) => {
+  console.log("Todo created", evt.detail);
+};

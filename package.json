@@ -5,20 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "sst dev",
-    "build": "sst build",
     "deploy": "sst deploy",
     "remove": "sst remove",
     "console": "sst console",
+    "test": "npm test --workspaces",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "sst": "^2.19.1",
-    "aws-cdk-lib": "2.84.0",
-    "constructs": "10.1.156",
-    "typescript": "^5.1.6",
-    "@tsconfig/node16": "^16.1.0"
+    "sst": "^3",
+    "typescript": "^5.1.6"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "overrides": {
+    "hono": "^4.12.0",
+    "@modelcontextprotocol/sdk": "^1.26.0"
+  }
 }
